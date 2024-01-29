@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDUHUB demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo Bhai" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        .col-12 {
+            padding-right: 87px;
+        }
+    </style>
+</head>
+<div class="container">
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top"><a
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+                href="/"><svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg><span class="fs-4">Simple header</span></a>
+            <div class="d-flex align-items-center">
+                <form class="w-50 me-3" role="search" action="/search"><input
+                        class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search">
+                </form>
+                <div class="dropdown text-end"><a
+                        class="d-block link-body-emphasis text-decoration-none dropdown-toggle" href="#"
+                        data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-circle"
+                            src="../static/images/mypic.jpg" alt="mdo" width="32" height="32"></a>
+                    <ul class="dropdown-menu text-small">
+                        <li><a class="dropdown-item" href="#"></a></li>
+
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="/upload">upload</a></li>
+                        
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<div class="hi">
+    <div class="main">
+        <div class="cons">
+            <h2>Content</h2>
+            <ul>
+                <a href="#aboutus">
+                    <li class="conlist">ABOUT US</li>
+                </a>
+                <a href="#popularprojects">
+                    <li class="conlist">POPULAR PROJECTS</li>
+                </a>
+                <a href="#popularinst">
+                    <li class="conlist">POPULAR INSTITUTIONS</li>
+                </a>
+                <a href="#achie">
+                    <li class="conlist">ACHIEVENMENTS</li>
+                </a>
+                <li class="conlist" id="drop">MORE v
+                    <ul class="dropdown">
+                        <hr>
+                        <a href="#collabpara">
+                            <li class="droplist">collabs</li>
+                        </a>
+                        <hr>
+                        <a href="#self">
+                            <li class="droplist">About the makers</li>
+                        </a>
+                        <hr>
+                    </ul>
+                </li>
+                <a href="#foot">
+                    <li class="conlist">FOOTER</li>
+                </a>
+            </ul>
+        </div>
+        <div class="scroll">
+            <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
+                <div class="carousel-indicators"><button class="active" type="button"
+                        data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" aria-current="true"
+                        aria-label="Slide 1"></button><button type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide-to="1" aria-label="Slide 2"></button><button type="button"
+                        data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000"><img class="d-block w-100"
+                            src="../static/images/300.jpg" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000"><img class="d-block w-100"
+                            src="../static/images/300.jpg" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000"><img class="d-block w-100"
+                            src="../static/images/300.jpg" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Previous</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Next</span></button>
+            </div>
+            <div class="aboutus" id="aboutus">
+                <div class="innerabout">
+                    <div class="innerabout1"><strong>
+                            <h1>EduHub - Igniting Minds at NGIT</h1>
+                        </strong><br>
+                        <p>Welcome to EduHub, the pulsating epicenter of innovation at Neil Gogte Institute of
+                            Technology (NGIT). As the beacon of creativity, we stand at the forefront of cultivating
+                            brilliance among NGIT students, fostering an environment
+                            where innovation thrives without limits.<br><br> Welcome to EduHub, the vibrant epicenter of
+                            innovation at Neil Gogte Institute of Technology (NGIT). At EduHub, we don&apos;t just
+                            celebrate innovation; we cultivate it. Here,
+                            students are not bound by conventional constraints but are encouraged to let their
+                            creativity soar.<br><br> Our mission is to be the catalyst that transforms the ordinary into
+                            the extraordinary. EduHub is not merely a platform;
+                            it&apos;s a mindset&mdash;a mindset that believes in the potential of every student to make
+                            a difference. As the beating heart of NGIT&apos;s inventive spirit, EduHub stands as a
+                            testament to the institute&apos;s commitment
+                            to fostering brilliance.<br><br></p>
+                        <h2>Our Vision :</h2>
+                        <p>At EduHub, we envision a future where every NGIT student is empowered to transform ideas into
+                            impactful innovations. Our commitment lies in being the driving force behind the emergence
+                            of groundbreaking solutions that address real-world
+                            challenges.</p><br><strong>
+                            <h1> Mission Statement:</h1>
+                        </strong><br>
+                        <p>Our mission is to nurture and showcase the intellectual prowess of NGIT students by providing
+                            a dynamic online platform that transcends traditional educational boundaries. EduHub is more
+                            than a platform; it&apos;s a transformative
+                            journey where ideas evolve into tangible achievements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popularprojects" id="popularprojects">
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static"><strong
+                                    class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                                <h3 class="mb-0">Featured post</h3>
+                                <div class="mb-1 text-body-secondary">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a
+                                    natural lead-in to additional content.</p><a
+                                    class="icon-link gap-1 icon-link-hover stretched-link" href="#">Continue reading<svg
+                                        class="bi">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg></a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block"><svg class="bd-placeholder-img" width="200"
+                                    height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-label="Placeholder: Thumbnail" preserveaspectratio="xMidYMid slice"
+                                    focusable="false">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static"><strong
+                                    class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                                <h3 class="mb-0">Post title</h3>
+                                <div class="mb-1 text-body-secondary">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to additional content.
+                                </p><a class="icon-link gap-1 icon-link-hover stretched-link" href="#">Continue
+                                    reading<svg class="bi">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg></a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block"><svg class="bd-placeholder-img" width="200"
+                                    height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-label="Placeholder: Thumbnail" preserveaspectratio="xMidYMid slice"
+                                    focusable="false">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static"><strong
+                                    class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                                <h3 class="mb-0">Featured post</h3>
+                                <div class="mb-1 text-body-secondary">Nov 12</div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a
+                                    natural lead-in to additional content.</p><a
+                                    class="icon-link gap-1 icon-link-hover stretched-link" href="#">Continue reading<svg
+                                        class="bi">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg></a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block"><svg class="bd-placeholder-img" width="200"
+                                    height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-label="Placeholder: Thumbnail" preserveaspectratio="xMidYMid slice"
+                                    focusable="false">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static"><strong
+                                    class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                                <h3 class="mb-0">Post title</h3>
+                                <div class="mb-1 text-body-secondary">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to additional content.
+                                </p><a class="icon-link gap-1 icon-link-hover stretched-link" href="#">Continue
+                                    reading<svg class="bi">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg></a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block"><svg class="bd-placeholder-img" width="200"
+                                    height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-label="Placeholder: Thumbnail" preserveaspectratio="xMidYMid slice"
+                                    focusable="false">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                        fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popularinst">
+                <div class="row" id="popularinst">
+                    <div
+                        class="col-lg-4 d-flex align-items-center justify-content-center flex-column shadow-sm h-md-250">
+                        <img class="bd-placeholder-img rounded-circle" src="../static/images/ngitlogo.webp" alt=""
+                            width="140" height="140">
+                        <h2 class="fw-normal">Heading</h2>
+                        <p>Some representative placeholder content for the three columns of text below the carousel.
+                            This is the first column.</p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div>
+                    <!-- /.col-lg-4-->
+                    <div
+                        class="col-lg-4 d-flex align-items-center justify-content-center flex-column shadow-sm h-md-250">
+                        <img class="bd-placeholder-img rounded-circle" src="../static/images/kmitlogo.png" alt=""
+                            width="140" height="140">
+                        <h2 class="fw-normal">Heading</h2>
+                        <p>Another exciting bit of representative placeholder content. This time, we&apos;ve moved on to
+                            the second column.
+                        </p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div>
+                    <!-- /.col-lg-4-->
+                    <div
+                        class="col-lg-4 d-flex align-items-center justify-content-center flex-column shadow-sm h-md-250">
+                        <img class="bd-placeholder-img rounded-circle" src="../static/images/cbitlogo.webp" alt=""
+                            width="140" height="140">
+                        <h2 class="fw-normal">Heading</h2>
+                        <p>And lastly this, the third column of representative placeholder content.</p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div>
+                    <!-- /.col-lg-4-->
+                </div>
+            </div><br><br>
+            <div class="achie" id="achie">
+                <p></p>
+                <h1>We Achevied:</h1><br><strong>
+                    <h3>Thriving Community:</h3>
+                </strong> EduHub has cultivated a vibrant community with over 1,000 students and 9 colleges actively
+                participating. This inclusive platform serves as a hub for interdisciplinary projects,
+                fostering collaboration and knowledge exchange among students.<br><br><strong>
+                    <h3> Local Impact:</h3>
+                </strong> Projects showcased on EduHub have not only earned acclaim within our community but have also
+                attracted attention from local industries.
+                The platform&apos;s success is evident in the doors it has opened for internships, partnerships, and
+                real-world applications.<br><br><strong>
+                    <h3>Community Growth:</h3>
+                </strong> EduHub&apos;s influence continues to grow, connecting students and
+                colleges in meaningful ways. The platform&apos;s impact is a testament to the remarkable collaboration
+                and innovation taking place within our academic community.
+                <p></p>
+            </div>
+            <div class="collabpara" id="collabpara">
+                <div class="innercollabpara"><strong>
+                        <h2>Join Us in Shaping the Future
+                            :</h2>
+                    </strong><br> We are thrilled to announce that EduHub is actively seeking collaboration
+                    opportunities, and we are excited about the prospect of working with institutions that share our
+                    passion for innovation and knowledge exchange.
+                    <br> In our journey towards fostering a collaborative environment, we are proud to highlight some of
+                    our esteemed collaborators:
+                    <br><strong>Vasavi Institute of Technology</strong>: A leading institution known for its commitment
+                    to academic excellence and innovation.
+                    <br><br><strong> CBIT (Chaitanya Bharathi Institute of Technology)</strong>: Renowned for its rich
+                    history and contributions to technological advancements. <br><br><strong>IIT Hyderabad</strong>: A
+                    prestigious institution recognized globally
+                    for its cutting-edge research and innovation.
+                    <br><br> These collaborations have been instrumental in creating a diverse and vibrant community on
+                    EduHub, bringing together students and faculties from various backgrounds. As we expand our
+                    horizons, we believe in the power of collaboration
+                    to drive innovation and foster cross-disciplinary learning.<br><br> Whether you are a college,
+                    university, or an organization passionate about education, we invite you to join hands with EduHub.
+                    Together, we can create an ecosystem that nurtures
+                    creativity, empowers students, and opens doors to exciting opportunities.<br><br><a class="innera"
+                        href=""><strong>Let&apos;s collaborate and inspire the next generation of
+                            innovators!</strong></a>
+                </div>
+            </div>
+            <div class="self" id="self">
+                <div class="innerself">
+                    <div class="one"><img src="../static/images/mypic.jpg" alt="">
+                        <div class="inone">
+                            <h5>PRADEEP</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, dolor ullam. Facilis
+                                magnam eaque excepturi ue sapiente doloremque asperiores ipsum vel error earum!
+                                Consectetur eum illum, aut .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one"><img src="../static/images/mypic.jpg" alt="">
+                        <div class="inone">
+                            <h5>ABHINAY</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, dolor ullam. Facilis
+                                magnam eaque excepturieque sapiente doloremque asperiores ipsum vel error earum!
+                                Consectetur eum illum, aut .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one"><img src="../static/images/mypic.jpg" alt="">
+                        <div class="inone">
+                            <h5>PRANEETH</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, dolor ullam. Facilis
+                                magnam eaque excepturi lique sapiente doloremque asperiores ipsum vel error earum!
+                                Consectetur eum illum, aut .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one"><img src="../static/images/mypic.jpg" alt="">
+                        <div class="inone">
+                            <h5>SHIVA</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, dolor ullam. Facilis
+                                magnam eaque sapiente doloremque asperiores ipsum vel error earum! Consectetur eum
+                                illum, aut .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one"><img src="../static/images/mypic.jpg" alt="">
+                        <div class="inone">
+                            <h5>ABHISHEK</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, dolor ullam. Facilis
+                                magnam eaque excepturieque sapiente doloremque asonsectetur adipisicing elit. Eum, dolor
+                                ullam. Facilis magnam eaque exc
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one"><img src="../static/images/mypic.jpg" alt="">
+                        <div class="inone">
+                            <h5>NAVYA</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, dolor ullam. Facilis
+                                magnam eaque apiente doloremque asperiores ipsum vel error earum! Consectetur eum illum,
+                                aut .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="other">
+                <div class="innerother"><strong>
+                        <h5>A Heartfelt Thank You to NGIT: Fostering Innovation and Excellence :</h5>
+                    </strong><br> Heartfelt thanks to Neil Gogte Institute of Technology (NGIT) for steering
+                    EduHub&apos;s journey. NGIT&apos;s steadfast support empowers students
+                    to turn ideas into impactful projects.<br><br> Special acknowledgment for fostering collaboration!
+                    NGIT&apos;s dedication to excellence has shaped EduHub. Proud to be part of the NGIT legacy, we
+                    anticipate continued exploration and possibilities.<br><br> In conclusion, EduHub, with NGIT, shapes
+                    a future where ideas flourish, and students make a meaningful impact.
+                    <br><br>
+                    <h5>With gratitude,</h5><br>
+                    <h5>[XXXXXXXXXXXXXXXXXXXX]</h5>
+                </div>
+            </div>
+            <footer class="foot" id="foot">
+                <div class="container">
+                    <footer class="py-3 my-4">
+                        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                            <li class="nav-item"><a class="nav-link px-2 tex t-body-secondary" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#">Features</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#">FAQs</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#">About</a></li>
+                        </ul>
+                        <p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+                    </footer>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="/static/css/sample.js"></script>

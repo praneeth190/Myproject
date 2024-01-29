@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project hub-path to projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        body{
+            background: #F0F3FA;
+        }
+        .full {
+            background-color: #F0F3FA;
+            /* Light gray background color */
+            border-radius: 10px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding inside the box */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Box shadow for a subtle lift */
+        }
+
+        .head {
+            margin-bottom: 20px;
+            /* Add some space below the header */
+        }
+
+        img {
+            border-radius: 50%;
+            /* Make the profile picture round */
+        }
+
+        .o1,
+        .o2,
+        .o3,
+        .o5,
+        .o6 {
+            margin-bottom: 15px;
+            /* Add space between each section */
+        }
+
+        p {
+            margin: 0;
+            /* Remove default margin for paragraphs */
+        }
+
+        /* Customize the header text */
+        .head p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #336E7B;
+            /* Dark text color */
+        }
+
+        /* Customize the section titles */
+        .o1,
+        .o2,
+        .o3,
+        .o5,
+        .o6 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #555;
+            /* Medium dark text color */
+        }
+
+        /* Customize the content text */
+        .full p {
+            font-size: 1rem;
+            color: #666;
+            /* Medium text color */
+        }
+
+        /* Add a subtle border between sections */
+        .o1,
+        .o2,
+        .o3,
+        .o5,
+        .o6 {
+            border-bottom: 1px solid #ddd;
+            /* Light gray border */
+        }
+
+        /* Style the PROJECT section differently */
+        .o5 {
+            background-color: #fff;
+            /* White background for PROJECT section */
+            padding: 15px;
+            /* Padding inside PROJECT section */
+            border-radius: 8px;
+            /* Rounded corners for PROJECT section */
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            /* Box shadow for PROJECT section */
+        }
+
+        .col-12 {
+            padding-right: 87px;
+        }
+
+        .show-more-button {
+            background-color: #3498db;
+            /* Button background color */
+            color: #fff;
+            /* Text color */
+            border: none;
+            /* Remove border */
+            padding: 10px 20px;
+            /* Add padding */
+            font-size: 16px;
+            /* Set font size */
+            cursor: pointer;
+            /* Add cursor pointer on hover */
+            border-radius: 5px;
+            /* Add rounded corners */
+            transition: background-color 0.3s ease;
+            /* Add smooth transition */
+        }
+
+        .show-more-button:hover {
+            background-color: #2980b9;
+            /* Change background
+             color on hover */
+        }
+       
+    /* Add or modify styles as needed */
+
+    /* ... Your existing styles ... */
+
+    .show-more-button {
+        background-color: #22313F;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center; /* Center text */
+        width: 25%; /* Full width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 37%;
+        transition: background-color 0.3s ease;
+    }
+
+    .show-more-button:hover {
+        background-color: #19B5FE;
+    }
+
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #fff; /* Adjust color as needed */
+        margin-left: 5px; /* Adjust spacing as needed */
+    }
+</style>
+
+  
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top"><a
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+                    href="/"><svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg><span class="fs-4">Project-Hub</span></a>
+                    <div class="d-flex align-items-center">
+                        <form class="w-50 me-3" role="search" action="/search"><input class="form-control" type="search"
+                                placeholder="Search..." aria-label="Search" name="search">
+                        </form>
+                        <div class="dropdown text-end">
+                            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../static/images/profile.jpg" alt="mdo" width="32" height="32"
+                                    class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li><a class="dropdown-item" href="#">New project...</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="/upload"  style="background-color: #336E7B; color: white;">upload</a></li>
+    
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="hi">
+        <div class="main">
+            <div class="cons" style="margin-left: 4%; border-radius: 17px;">
+                <h2 style="font-size: 1.8rem;">Search on</h2>
+                <ul>
+                    <a href="#aboutus">
+                        <li class="conlist">GROUP</li>
+                    </a>
+                    <a href="#popularprojects">
+                        <li class="conlist">PROJECTS NAME</li>
+                    </a>
+                    <a href="#popularinst">
+                        <li class="conlist">INSTITUTIONS NAME</li>
+                    </a>
+                    <a href="#achie">
+                        <li class="conlist">GENERE</li>
+                    </a>
+                    <li class="conlist" id="drop">NAME OF STUDENT</li>
+                    
+                </ul>
+            </div>
+            <div class="scroll" style="background: #F0F3FA;
+">
+                <% data.forEach(function(user) { %>
+
+                    <div class="fullfull">
+                        <div class="full">
+                            <div class="head">
+                                <div class="headofhead" style="display:flex ; flex-direction: row;">
+                                    <img src="../static/images/profile.jpg" alt=""
+                                        style="height: 44px; width: 43px; border-radius: 50%; margin: 6px;">
+                                    <div class="innerhead"
+                                        style="display: flex; flex-direction: column; margin-top: 3px;">
+                                        <strong>
+                                            <p style="height: 17px; color: black;">
+                                                <%= user.name %>
+                                            </p>
+                                        </strong>
+                                        <p style="color: black;">
+                                            <%= user.collegeName %>,
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="o1 he" style="display: flex; flex-direction: row;">
+                                <div style="width: 30%; font-size: 1.25rem;">Project Name: </div>
+                                <div style="width: 70%;">
+                                    <p>
+                                        <%= user.projectName %>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="o1 he" style="display: flex; flex-direction: row;">
+                                <div style="width: 30%; font-size: 1.25rem;">Name of the College: </div>
+                                <div style="width: 70%;">
+                                    <p>
+                                        <%= user.collegeName %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="o1 he" style="display: flex; flex-direction: row;">
+                                <div style="width: 30%; font-size: 1.25rem;">Email: </div>
+                                <div style="width: 70%;">
+                                    <p>
+                                        <%= user.email %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="o1 he" style="display: flex; flex-direction: row;">
+                                <div style="width: 30%; font-size: 1.25rem;">Genere: </div>
+                                <div style="width: 70%;">
+                                    <p>
+                                        <%= user.genre %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="o1 he" style="display: flex; flex-direction: row;">
+                                <div style="width: 30%; font-size: 1.25rem;">Branch: </div>
+                                <div style="width: 70%;">
+                                    <p>
+                                        <%= user.branch %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="o1 he" style="display: flex; flex-direction: row;">
+                                <div style="width: 30%; font-size: 1.25rem;">Year Of Study: </div>
+                                <div style="width: 70%;">
+                                    <p>
+                                        <%= user.yearOfStudy %>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="hidden-content">
+                                <div class="o6 he" style="display: flex; flex-direction: row;">
+                                    <div style="width: 30%; font-size: 1.25rem;">Group Members: </div>
+                                    <div style="width: 70%;">
+                                        <p>
+                                            <%= user.groupMembers %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="o1 he" style="display: flex; flex-direction: row;">
+                                    <div style="width: 30%; font-size: 1.25rem;">Mentor Name: </div>
+                                    <div style="width: 70%;">
+                                        <p>
+                                            <%= user.mentor %>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="o2 he" style="display: flex; flex-direction: row;">
+                                    <div style="width: 30%; font-size: 1.25rem;">Span Of Project: </div>
+                                    <div style="width: 70%;">
+                                        <p>
+                                            <%= user.spanOfProjectTime %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="o3 he" style="display: flex; flex-direction: row;">
+                                    <div style="width: 30%; font-size: 1.25rem;">Description: </div>
+                                    <div style="width: 70%;">
+                                        <p>
+                                            <%= user.description %>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="o5 he" style="display: flex; flex-direction: column; ">
+                                    <div style="height: 40px; font-size: 1.25rem;">PROJECT:</div>
+                                    <div>
+                                        <p>
+                                            <%= user.projectInfo %>
+                                        </p><br>
+                                        <div class="link">
+                                            <a href="<%= user.urlink %>">Click here to view the files/github project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                </div>
+                            </div>
+
+                            <button class="show-more-button" onclick="toggleContent(this)">
+                                Show More
+                                <span class="arrow-down"></span>
+                            </button>
+                            
+
+                        </div>
+                    </div>
+                    <br>
+                    <% }); %>
+
+                        <footer class="foot" id="foot">
+                            <div class="container">
+                                <footer class="py-3 my-4">
+                                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                                        <li class="nav-item"><a class="nav-link px-2 tex t-body-secondary"
+                                                href="#">Home</a></li>
+                                        <li class="nav-item"><a class="nav-link px-2 text-body-secondary"
+                                                href="#">Features</a></li>
+                                        <li class="nav-item"><a class="nav-link px-2 text-body-secondary"
+                                                href="#">Pricing</a></li>
+                                        <li class="nav-item"><a class="nav-link px-2 text-body-secondary"
+                                                href="#">FAQs</a></li>
+                                        <li class="nav-item"><a class="nav-link px-2 text-body-secondary"
+                                                href="#">About</a></li>
+                                    </ul>
+                                    <p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+                                </footer>
+                            </div>
+                        </footer>
+            </div>
+
+        </div>
+    </div>
+    <script src="/static/css/sample.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"
+        integrity="sha384-dg6k7bPAaKZLSk7i/U3CU+H80+K8YWu5Kq8ZNIUEeUR7xwkg2gEhdX3D+PzXYq6Y"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Hide the content on page load for all sections
+                var hiddenContents = document.querySelectorAll('.hidden-content');
+                hiddenContents.forEach(function (hiddenContent) {
+                    hiddenContent.style.display = 'none';
+                });
+            });
+        
+            function toggleContent(button) {
+                // Find the parent element of the button
+                var parent = button.closest('.fullfull');
+        
+                // Find the hidden content within the parent
+                var hiddenContent = parent.querySelector('.hidden-content');
+        
+                // Toggle the visibility of the hidden content
+                if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+                    hiddenContent.style.display = 'block';
+                    button.textContent = 'Show Less';
+                } else {
+                    hiddenContent.style.display = 'none';
+                    button.textContent = 'Show More';
+                }
+            }
+        </script>
+        
+</body>
+
+</html>
